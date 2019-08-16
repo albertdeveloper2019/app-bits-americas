@@ -1,0 +1,75 @@
+<ion-content padding>
+  <h3 class="MarginH3"> Registro de Usuario <ion-icon style="float: right" name="close" (click)= "modalCtrl.dismiss()"></ion-icon> </h3>
+  <form #formRegister="ngForm" (ngSubmit)="callRegister(formRegister)" novalidate>
+    
+      <ion-list class="MarginList">
+        <ion-item>
+          <ion-icon name="person"></ion-icon> 
+          <ion-input placeholder="Nombre y Apellido" 
+                     clearInput 
+                     type="text"
+                     required
+                     name="nombreCompleto"
+                     [(ngModel)]="user.nombre"
+                     ngControl="nombre"
+                     class="MarginInput" >
+          </ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-icon name="call"></ion-icon> 
+              <ion-input placeholder="Telefono" 
+                         clearInput value=""
+                         type="text"
+                         name="telefono"
+                         [(ngModel)]="user.telefono"
+                         ngControl="telefono"
+                         class="MarginInput" >
+              </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="mail"></ion-icon>
+            <ion-input type="email"
+                       placeholder="Email"
+                       clearInput value="" 
+                       class="MarginInput"
+                       pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                       name="email"
+                       [(ngModel)]="user.email"
+                       ngControl="email"
+                       required>
+            </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="lock"></ion-icon>
+            <ion-input type="password"
+                       name="password"
+                       minlength=6
+                       class="MarginInput"
+                       placeholder="Password"
+                       [(ngModel)]="user.password"
+                       ngControl="password" 
+                       required>
+            </ion-input>
+        </ion-item>
+        <ion-item class="MarginCheckBox">
+              <ion-checkbox class="MarginCheckBox2" 
+                            color="orange"
+                            name="check"
+                            [(ngModel)]="user.check" 
+                            ngControl="check"                         
+                            required>
+              </ion-checkbox>  
+              Acepto los términos y condiciones
+        </ion-item>
+      </ion-list>
+      <ion-button expand="full" type="submit"
+                  class="MarginButton" text-capitalize expand="full"
+                  [disabled]="formRegister.invalid || formRegister.value.check === false">
+                  Registrate
+              <ion-spinner 
+              *ngIf="mostrar"
+              name="bubbles"></ion-spinner>
+      </ion-button>
+    </form>
+  </ion-content>
+  

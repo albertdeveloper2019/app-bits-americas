@@ -1,0 +1,75 @@
+ion-content{
+    --ion-background-color: white;
+}
+
+ion-input{
+    --placeholder-size: 5px;
+    --placeholder-opacity: 1;
+}
+
+ion-row{
+    --ion-background-color:white;
+}
+ion-button {
+    --background: rgb(60, 255, 0);
+}
+
+ion-toolbar {
+    --background: rgb(60, 255, 0);
+    --border-color: rgb(60, 255, 0);
+    --border-style: solid;
+    --border-width: 4px;
+    --color: white;
+    --min-height: 56px;
+    --opacity: 1;
+    --padding-bottom: 4px;
+    --padding-end: 4px;
+    --padding-start: 4px;
+    --padding-top: 4px;
+}
+
+.hrefLink{
+    text-decoration: underline;
+    color: black;
+}
+
+.MarginH3{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.MarginList{
+    margin-top: 40px;
+}
+
+.MarginButton{
+    margin-top: 30px;
+}
+
+.MarginLabel{
+    margin-top: 20px;
+    text-align: center;
+    
+}
+
+.MarginCheckBox{
+    text-align: center;
+    font-size: 11px;
+}
+
+.MarginCheckBox2{
+    margin-right: 10px;
+}
+
+.MarginGrid{
+    margin-top: 20px;
+}
+
+.MarginInput{
+    text-align: start;
+    margin-left: 10px;
+}
+
+.ios ion-back-button {
+    --color: #ffffff;
+}
